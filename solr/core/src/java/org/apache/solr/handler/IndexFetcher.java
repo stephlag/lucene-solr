@@ -351,7 +351,7 @@ public class IndexFetcher {
 
       try {
         
-        if (isIndexStale(indexDir)) {
+        if (!isFullCopyNeeded && isIndexStale(indexDir)) {
           isFullCopyNeeded = true;
         }
         
